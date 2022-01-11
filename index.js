@@ -24,7 +24,7 @@ if(votingAge >= 18){
   console.log(true);
 } else {
   console.log(false);
-};
+}
 
 
 /*
@@ -41,7 +41,7 @@ let number = 70
 const anotherNumber = 10
 if(anotherNumber < 20){
   number = 20;
-};
+}
 console.log (number);
 
 
@@ -89,7 +89,7 @@ Do the following:
 
 function dogYears(humanYears){
   return humanYears * 7;
-};
+}
 
 
 
@@ -120,8 +120,22 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(weight <= 5 && age >= 1){
+    return weight*.05;
+  } else if(weight >=6 && weight <=10 && age >= 1){
+    return weight * .04;
+  } else if(weight >= 11 && weight <= 15 && age >= 1){
+    return weight * .03;
+  }else if(weight > 15 && age >= 1){
+    return weight*.02;
+  }else if(age >= 2/12 && age < 4/12){
+    return weight*.1;
+  }else if(age >= 4/12 && age < 7/12){
+    return weight*.05;
+  }else if(age >= 7/12 && age < 1){
+    return weight*.04;
+  }
 }
 
 
