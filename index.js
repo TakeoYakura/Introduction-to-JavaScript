@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18
+if(votingAge >= 18){
+  console.log(true);
+} else {
+  console.log(false);
+};
 
 
 /*
@@ -32,9 +37,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let number = 70
+const anotherNumber = 10
+if(anotherNumber < 20){
+  number = 20;
+};
+console.log (number);
 
 
 /*
@@ -47,8 +55,11 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let year = '1999'
+function stringConversion(string){
+  return parseInt(string);
+}
+console.log(stringConversion(year));
 
 
 /*
@@ -61,7 +72,7 @@ Do the following:
 */
 
 function multiply(a,b){
-  return a * b
+  return a * b;
 }
 
 
@@ -76,9 +87,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
+function dogYears(humanYears){
+  return humanYears * 7;
+};
 
 
 
