@@ -129,12 +129,12 @@ function hungryDog(weight, age){
     return weight * .03;
   }else if(weight > 15 && age >= 1){
     return weight*.02;
-  }else if(age >= 2/12 && age < 4/12){
+  }else if(age >= .1666 && age < .3333){
     return weight*.1;
-  }else if(age >= 4/12 && age < 7/12){
+  }else if(age >= .3333 && age < .583){
     return weight*.05;
-  }else if(age >= 7/12 && age < 1){
-    return weight*.04;
+  }else{
+    return weight*0.04;
   }
 }
 
@@ -162,9 +162,39 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+let computer =  Math.round(Math.random()*3);
+if(computer === 0){
+  computer = 'scissors';
+} else if(computer === 1){
+  computer = 'paper';
+} else if(computer === 2){
+  computer = 'rock';
+}
 function game(user, computer){
-  /*add your code here*/
+  if(user === computer){
+    return "it's a tie";
+  }
+  if(user === 'scissors'){
+    if(computer === 'paper'){
+      return "you win!"
+    } else {
+      return 'you lose!'
+    }
+  }
+  if(user === 'rock'){
+    if(computer === 'paper'){
+      return 'you lose!'
+    }else{
+      return 'you win!'
+    }
+  }
+  if(user === 'paper'){
+    if(computer === 'rock'){
+      return 'you win!'
+    }else{
+      return 'you lose!'
+    }
+  }
 }
 
 
@@ -180,8 +210,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers*.621371;
+  
 }
 
 
@@ -194,8 +225,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm/30.48;
 }
 
 
